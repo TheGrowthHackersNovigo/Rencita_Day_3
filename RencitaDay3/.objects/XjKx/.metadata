@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Stock Screener and fundamental analysis tool for Indian stocks - Screener",
+  "Type": "App",
+  "Id": "XjKxykPKn0KLAtlK3r9low",
+  "Reference": "mAvNSvS7V0WBrW1xA9enCg/XjKxykPKn0KLAtlK3r9low",
+  "Created": "2024-07-05T06:57:42.5220108Z",
+  "Updated": "2024-07-05T06:57:42.5220108Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="vFQXEpRlu0uKCl-7y5zFQQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="dc48112e-db9b-457d-b8f8-4c8ae53bb769" CvTextArea="112, 271, 199, 42" CvType="AnyWordGroup" DesignTimeRectangle="111, 265, 201, 49" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='top' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='top' tag='H1' type='' class='margin-0 show-from-tablet-landscape' /&gt;" Guid="096b37da-c6e0-494f-a9dd-30b98fa81ece" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="04a1588729cf89cd3ba5f4abd01f41f6.png" xmlns="">0Ro401wZdEkqNdahrS8lxUA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

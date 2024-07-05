@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Get Text 'Infosys Ltd'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "8k3ywuOQkka8a27zHh3ytQ",
+  "Reference": "mAvNSvS7V0WBrW1xA9enCg/8k3ywuOQkka8a27zHh3ytQ",
+  "ParentRef": "mAvNSvS7V0WBrW1xA9enCg/mkC-2Gpd70WRC39qYNEBSQ",
+  "Created": "2024-07-05T07:28:30.381596Z",
+  "Updated": "2024-07-05T07:28:30.381596Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

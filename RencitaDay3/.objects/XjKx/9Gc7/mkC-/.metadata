@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Stock Screener and fundamental analysi",
+  "Type": "Screen",
+  "Id": "mkC-2Gpd70WRC39qYNEBSQ",
+  "Reference": "mAvNSvS7V0WBrW1xA9enCg/mkC-2Gpd70WRC39qYNEBSQ",
+  "ParentRef": "mAvNSvS7V0WBrW1xA9enCg/9Gc7qdY3gkq5kgqcDMuUZg",
+  "Created": "2024-07-05T06:57:42.6342976Z",
+  "Updated": "2024-07-05T06:57:42.6342976Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
