@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Quesion1c" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,937" sap2010:WorkflowViewState.IdRef="Quesion1c_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Quesion1c" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,1661.6" sap2010:WorkflowViewState.IdRef="Quesion1c_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -85,7 +85,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Quesion1c" sap:VirtualizedContainerService.HintSize="416,872" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• Generate report (Excel File) of all employees (First Name &amp; Last Name) who have 4-wheeler Pass. Refer VehiclePass Sheet." DisplayName="Quesion1c" sap:VirtualizedContainerService.HintSize="416,1596.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_InputData" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Vehicle" />
@@ -96,12 +96,38 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_InputData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Personal" WorkbookPath="Input\Assignment_1.xlsx" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_Vehicle]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="VehiclePass" WorkbookPath="Input\Assignment_1.xlsx" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_InputData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Personal" WorkbookPath="Input\Assignment_1.xlsx" />
-    <ui:JoinDataTables DataTable1="[dt_InputData]" DataTable2="[dt_Vehicle]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner" OutputDataTable="[dt_OutputData]">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to load personal data" DataTable="[dt_InputData]" DisplayName="Read Range Workbook : Personal" sap:VirtualizedContainerService.HintSize="353.6,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Personal" WorkbookPath="Input\Assignment_1.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log personal data is extracted" DisplayName="Log Message : Personal" sap:VirtualizedContainerService.HintSize="353.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Data loaded&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to load vehicle data" DataTable="[dt_Vehicle]" DisplayName="Read Range Workbook : Vehicle Pass" sap:VirtualizedContainerService.HintSize="353.6,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="VehiclePass" WorkbookPath="Input\Assignment_1.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message that vehicle data is extracted" DisplayName="Log Message: Vehicle Pass" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Data extracted&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:JoinDataTables sap2010:Annotation.AnnotationText="This activity is used to join personal and vehicle data table" DataTable1="[dt_InputData]" DataTable2="[dt_Vehicle]" DisplayName="Join Data Tables :Personal and vehicle" sap:VirtualizedContainerService.HintSize="353.6,136" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner" OutputDataTable="[dt_OutputData]">
       <ui:JoinDataTables.Arguments>
         <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
           <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -114,8 +140,13 @@
           </ui:JoinOperationArgument>
         </scg:List>
       </ui:JoinDataTables.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:JoinDataTables>
-    <ui:FilterDataTable DataTable="[dt_OutputData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_Output]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="This activity is used to filter names" DataTable="[dt_OutputData]" DisplayName="Filter Data Table : Names" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_Output]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="GTE">
@@ -134,7 +165,25 @@
           <InArgument x:TypeArguments="x:String">["Lname"]</InArgument>
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[dt_Output]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Output\Assignment_1\Assignment_1c.xlsx" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" sap2010:Annotation.AnnotationText="This activity is used to write results to data table" DataTable="[dt_Output]" DisplayName="Write Range Workbook : Write to data table" sap:VirtualizedContainerService.HintSize="353.6,179.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Output\Assignment_1\Assignment_1c.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WriteRange>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log succeess message" DisplayName="Log Message : Successfull" sap:VirtualizedContainerService.HintSize="353.6,196.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Executed successfully&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>

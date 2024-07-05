@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_6" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,4223" sap2010:WorkflowViewState.IdRef="Question_6_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_6" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="885.6,4849.6" sap2010:WorkflowViewState.IdRef="Question_6_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -124,7 +124,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Question_6" sap:VirtualizedContainerService.HintSize="896,4158" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• Go to URL: https://www.screener.in/&#xD;&#xA;• For the company ids provided in the attached Excel generate an output file with the following fields. &#xD;&#xA;                   Company Name, High, Low, Face Value&#xD;&#xA;• Save the output in an excel file&#xD;&#xA;" DisplayName="Question_6" sap:VirtualizedContainerService.HintSize="896,4784.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
       <Variable x:TypeArguments="x:String" Name="LowValue" />
@@ -136,40 +136,42 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="834,4070" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to usenexcel " DisplayName="Excel Process Scope : use excel " sap:VirtualizedContainerService.HintSize="833.6,4604" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="800,3960" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do: Execute " sap:VirtualizedContainerService.HintSize="800,4463.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="738,3872" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Input\Input_Screener.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to open excel file " DisplayName="Use Excel File : Open excel " sap:VirtualizedContainerService.HintSize="737.6,4343.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Input\Input_Screener.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704,3580" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Do : Execute Excel " sap:VirtualizedContainerService.HintSize="704,4019.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="642,201" sap2010:WorkflowViewState.IdRef="ReadRangeX_3" Range="[Excel.Sheet(&quot;Screener&quot;)]" SaveTo="[Input_Data]" />
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Input_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="642,3291" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="641.6,201.6" sap2010:WorkflowViewState.IdRef="ReadRangeX_3" Range="[Excel.Sheet(&quot;Screener&quot;)]" SaveTo="[Input_Data]" />
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each value from data table execute the following " DataTable="[Input_Data]" DisplayName="For Each Row in Data Table :m value from excel " sap:VirtualizedContainerService.HintSize="641.6,3728.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,3104" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <Sequence sap2010:Annotation.AnnotationText="Required to perform browser process" DisplayName="Body : Open browser " sap:VirtualizedContainerService.HintSize="608,3508.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="CompanyName" />
                               <Variable x:TypeArguments="sd:DataTable" Name="Input_Data" />
@@ -177,28 +179,29 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Stock Screener and fundamental analysi" sap:VirtualizedContainerService.HintSize="546,1881" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="c1fa1d92-6f48-445d-837a-92c266209dbf" Version="V2">
+                            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Open the URL" AttachMode="ByInstance" DisplayName="Chrome Stock Screener and fundamental analysi" sap:VirtualizedContainerService.HintSize="545.6,1917.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="c1fa1d92-6f48-445d-837a-92c266209dbf" Version="V2">
                               <uix:NApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="512,1632" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                  <Sequence DisplayName="Sequence : Execute " sap:VirtualizedContainerService.HintSize="512,1637.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1542" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                    <Sequence DisplayName="Do : Process" sap:VirtualizedContainerService.HintSize="449.6,1547.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Screens'" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" Version="V3">
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Screens'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" Version="V3">
                                         <uix:NClick.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.screener.in/" DesignTimeRectangle="184, 129, 124, 50" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Screens' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Screens' tag='A' type='' class='' check:innerText='SCREENS' /&gt;" Guid="3d2cb42b-c0d4-4a26-924a-10991db565b7" ImageBase64="" InformativeScreenshot="766a6a6f18eceed5c50a2cc88b899727.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Stock Screener and fundamental analysis tool for Indian stocks - Screener' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                                         </uix:NClick.Target>
@@ -213,7 +216,7 @@
                                           </uix:VerifyExecutionOptions>
                                         </uix:NClick.VerifyOptions>
                                       </uix:NClick>
-                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString()]" Version="V3">
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString()]" Version="V3">
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.screener.in/explore/" DesignTimeRectangle="980, 137, 250, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' type='search' class='u-full-width' placeholder='Search for a company' aaname='' /&gt;" Guid="9a52efc2-22cb-43d5-adfd-61444123a780" ImageBase64="" InformativeScreenshot="77f2aa114280cb3bf3228c0784978497.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Explore stock screens - Screener' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                                         </uix:NTypeInto.Target>
@@ -228,7 +231,7 @@
                                           </uix:VerifyExecutionTypeIntoOptions>
                                         </uix:NTypeInto.VerifyOptions>
                                       </uix:NTypeInto>
-                                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,169" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
                                         <ui:SendHotkey.Target>
                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a30d4f48-e9e8-4378-b8a3-719ba5bcba6d">
                                             <ui:Target.TimeoutMS>
@@ -240,12 +243,12 @@
                                           </ui:Target>
                                         </ui:SendHotkey.Target>
                                       </ui:SendHotkey>
-                                      <uix:NGetText DisplayName="Get Text 'Infosys Ltd'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" TextString="[CompanyName]" Version="V3">
+                                      <uix:NGetText DisplayName="Get Text 'Infosys Ltd'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" TextString="[CompanyName]" Version="V3">
                                         <uix:NGetText.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="dc48112e-db9b-457d-b8f8-4c8ae53bb769" CvTextArea="112, 271, 199, 42" CvType="AnyWordGroup" DesignTimeRectangle="111, 265, 201, 49" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='top' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='top' tag='H1' type='' class='margin-0 show-from-tablet-landscape' /&gt;" Guid="096b37da-c6e0-494f-a9dd-30b98fa81ece" ImageBase64="" InformativeScreenshot="04a1588729cf89cd3ba5f4abd01f41f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                                         </uix:NGetText.Target>
                                       </uix:NGetText>
-                                      <uix:NGetText DisplayName="Get Text 'High / Low'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" TextString="[HighValue]" Version="V3">
+                                      <uix:NGetText DisplayName="Get Text 'High / Low'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" TextString="[HighValue]" Version="V3">
                                         <uix:NGetText.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/TCS/consolidated/" CVScreenId="3e51b033-1b80-4754-bee3-06588848eaf9" CvTextArea="900, 403, 42, 16" CvType="AnyWordGroup" DesignTimeRectangle="901, 401, 41, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='4,255' class='number' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="57c2d28c-507e-402e-96aa-78516eb32fc8" InformativeScreenshot="29e0128ca8212deed74aed5ddd153d08.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
@@ -256,18 +259,18 @@
                                           </uix:TargetAnchorable>
                                         </uix:NGetText.Target>
                                       </uix:NGetText>
-                                      <uix:NGetText DisplayName="Get Text 'High / Low'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" TextString="[LowValue]" Version="V3">
+                                      <uix:NGetText DisplayName="Get Text 'High / Low'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" TextString="[LowValue]" Version="V3">
                                         <uix:NGetText.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/TCIEXP/" DesignTimeRectangle="968, 401, 29, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='998' class='number' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="03b7be18-e011-4e22-b827-ed65561e59a6" InformativeScreenshot="a66a0a1d0cbbb94243d4b4e2678cf638.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='TCI Express Ltd share price | About TCI Express | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                 <uix:Target DesignTimeRectangle="746, 399, 74, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='          High / Low        ' class='name' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          High / Low        ' class='name' parentid='top-ratios' tag='SPAN' type='' check:innerText='High / Low' /&gt;" Guid="bce7ec7f-457b-4378-b950-e38d652edeff" ImageBase64="" SearchSteps="Selector" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
                                           </uix:TargetAnchorable>
                                         </uix:NGetText.Target>
                                       </uix:NGetText>
-                                      <uix:NGetText DisplayName="Get Text 'Face Value'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" TextString="[FareValue]" Version="V3">
+                                      <uix:NGetText DisplayName="Get Text 'Face Value'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="c1fa1d92-6f48-445d-837a-92c266209dbf" TextString="[FareValue]" Version="V3">
                                         <uix:NGetText.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="dc48112e-db9b-457d-b8f8-4c8ae53bb769" CvTextArea="951, 498, 46, 14" CvType="AnyWordGroup" DesignTimeRectangle="953, 494, 44, 23" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span' idx='18' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='nowrap value' parentid='top-ratios' tag='SPAN' /&gt;" Guid="1ec06817-0948-4859-8a2f-cebff62305f8" InformativeScreenshot="878f8ff9645201973445d20a7a035a44.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
@@ -289,32 +292,69 @@
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NApplicationCard>
-                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="546,1135" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="Maximize" WorkbookPath="Output\Assignment_6\Assignment_5.xlsx">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File : Write results " sap:VirtualizedContainerService.HintSize="545.6,1274.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="Maximize" WorkbookPath="Output\Assignment_6\Assignment_5.xlsx">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,843" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                  <Sequence DisplayName="Do : Write in excel " sap:VirtualizedContainerService.HintSize="496,972.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[CompanyName]" />
-                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;B2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[HighValue]" />
-                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[LowValue]" />
-                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;D2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,182" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[FareValue]" />
+                                    <ueab:WriteCellX sap2010:Annotation.AnnotationText="Update the company names " AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A2&quot;)]" DisplayName="Write Cell : Company name " sap:VirtualizedContainerService.HintSize="433.6,223.2" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[CompanyName]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ueab:WriteCellX>
+                                    <ueab:WriteCellX sap2010:Annotation.AnnotationText="Used to store high value in excel " AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;B2&quot;)]" DisplayName="Write Cell High value " sap:VirtualizedContainerService.HintSize="433.6,223.2" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[HighValue]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ueab:WriteCellX>
+                                    <ueab:WriteCellX sap2010:Annotation.AnnotationText="Used to update the low value in excel " AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell : Low value " sap:VirtualizedContainerService.HintSize="433.6,223.2" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[LowValue]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ueab:WriteCellX>
+                                    <ueab:WriteCellX sap2010:Annotation.AnnotationText="update face value in excel " AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;D2&quot;)]" DisplayName="Write Cell : Face value " sap:VirtualizedContainerService.HintSize="433.6,214.4" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[FareValue]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ueab:WriteCellX>
                                   </Sequence>
                                 </ActivityAction>
                               </ueab:ExcelApplicationCard.Body>
                             </ueab:ExcelApplicationCard>
+                            <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to display success message " DisplayName="Log Message : Successfull" sap:VirtualizedContainerService.HintSize="545.6,196.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Executed successfully&quot;]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:LogMessage>
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEachRow>
                   </Sequence>
                 </ActivityAction>
@@ -323,12 +363,18 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ueab:ExcelApplicationCard>
           </Sequence>
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
   </Sequence>
 </Activity>
