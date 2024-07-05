@@ -102,16 +102,8 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Question_3" sap:VirtualizedContainerService.HintSize="784,2056" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Name="Total_CashIn">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:Int32" Name="Total_On_Us_check">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="Total_CashIn" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="Total_On_Us_check" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="Total_Not_on_us" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_InputData" />
     </Sequence.Variables>
