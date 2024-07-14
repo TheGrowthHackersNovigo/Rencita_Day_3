@@ -91,7 +91,6 @@
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Vehicle" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_OutputData" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Output" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_results" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">

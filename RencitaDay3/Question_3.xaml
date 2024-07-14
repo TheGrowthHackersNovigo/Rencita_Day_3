@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_3" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,2228.8" sap2010:WorkflowViewState.IdRef="Question_3_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_3" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,2952" sap2010:WorkflowViewState.IdRef="Question_3_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -100,7 +100,7 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Build a workflow that calculates the total monthly deposit of a bank from an Excel file and store output in a new sheet.&#xD;&#xA;• Download the Excel file link given for practice.&#xD;&#xA;• The file contains three deposit categories – Cash In, On-Us Check, and Not On-Us Check.&#xD;&#xA;• Calculate the total amount received in all three categories for June.&#xD;&#xA;• Store calculated values in a new sheet in the same excel file.&#xD;&#xA;" DisplayName="Question_3" sap:VirtualizedContainerService.HintSize="784,2887.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Build a workflow that calculates the total monthly deposit of a bank from an Excel file and store output in a new sheet.&#xA;• Download the Excel file link given for practice.&#xA;• The file contains three deposit categories – Cash In, On-Us Check, and Not On-Us Check.&#xA;• Calculate the total amount received in all three categories for June.&#xA;• Store calculated values in a new sheet in the same excel file.&#xA;" DisplayName="Question_3" sap:VirtualizedContainerService.HintSize="784,2887.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="Total_CashIn" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="Total_On_Us_check" />
@@ -144,7 +144,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ueab:ReadRangeX>
-                    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity logs message data is loaded " DisplayName="Log Message : Data loaded " sap:VirtualizedContainerService.HintSize="529.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Data is loaded from excel&quot;]">
+                    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity logs message data is loaded " DisplayName="Log Message : Data loaded " sap:VirtualizedContainerService.HintSize="529.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Data is loaded from excel&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

@@ -120,12 +120,17 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• From the attached excel file [Assignment_Dataset.xlsx], fetch only the records whose Age is more than 40 and less than 50. Write it in a new excel file [1] using Workbook activities. &#xD;&#xA;• From the newly created excel file [1], Display the Last Name of the 4th data row in message box using excel activities &#xD;&#xA;• In the newly created excel file [1], Replace\Write the First Name of the 3rd data row with your name using workbook activities. &#xD;&#xA;" DisplayName="Assingnment : Question 2" sap:VirtualizedContainerService.HintSize="592,2904" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• From the attached excel file [Assignment_Dataset.xlsx], fetch only the records whose Age is more than 40 and less than 50. Write it in a new excel file [1] using Workbook activities. &#xA;• From the newly created excel file [1], Display the Last Name of the 4th data row in message box using excel activities &#xA;• In the newly created excel file [1], Replace\Write the First Name of the 3rd data row with your name using workbook activities. &#xA;" DisplayName="Assingnment : Question 2" sap:VirtualizedContainerService.HintSize="592,2904" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_InputData" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_OutputData" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_data" />
       <Variable x:TypeArguments="s:String[]" Name="NameArray" />
+      <Variable x:TypeArguments="x:String" Name="Name">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Rencita</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -206,7 +211,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="The respective data is written to a excel file " DisplayName="Log Message:Upload to excel " sap:VirtualizedContainerService.HintSize="529.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Uploaded results&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="The respective data is written to a excel file " DisplayName="Log Message:Upload to excel " sap:VirtualizedContainerService.HintSize="529.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Uploaded results&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -220,7 +225,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to upload the previous result excel file " DisplayName="Log Message :Result " sap:VirtualizedContainerService.HintSize="529.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Extracted data &quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to upload the previous result excel file " DisplayName="Log Message :Result " sap:VirtualizedContainerService.HintSize="529.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Extracted data &quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -268,7 +273,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MessageBox>
-    <ui:WriteCell sap2010:Annotation.AnnotationText="This activity is used to replace with a specific value " Cell="B5" DisplayName="Write Cell Workbook : Replace " sap:VirtualizedContainerService.HintSize="529.6,179.2" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Sheet1" Text="Rencita" WorkbookPath="Output\Assignment_2\Assignment_2.xlsx">
+    <ui:WriteCell sap2010:Annotation.AnnotationText="This activity is used to replace with a specific value " Cell="B5" DisplayName="Write Cell Workbook : Replace " sap:VirtualizedContainerService.HintSize="529.6,179.2" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Sheet1" Text="[Name]" WorkbookPath="Output\Assignment_2\Assignment_2.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Quesion_1e" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,4732" sap2010:WorkflowViewState.IdRef="Quesion_1e_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Quesion_1e" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="796.8,2390.4" sap2010:WorkflowViewState.IdRef="Quesion_1e_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -88,7 +88,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• Generate report (Excel File) of all employees (First Name &amp; Last Name) who took leave in June but not in July (Refer Sheet Leave_Jun21 &amp; Leave_July21)" DisplayName="Quesion_1e" sap:VirtualizedContainerService.HintSize="512,4667.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• Generate report (Excel File) of all employees (First Name &amp; Last Name) who took leave in June but not in July (Refer Sheet Leave_Jun21 &amp; Leave_July21)" DisplayName="Quesion_1e" sap:VirtualizedContainerService.HintSize="416,2325.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_June" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_July" />
@@ -103,179 +103,35 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="• Generate report (Excel File) of all employees (First Name &amp; Last Name) who took leave in June but not in July (Refer Sheet Leave_Jun21 &amp; Leave_July21)" DisplayName="Quesion_1e" sap:VirtualizedContainerService.HintSize="449.6,2357.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="sd:DataTable" Name="dt_June" />
-        <Variable x:TypeArguments="sd:DataTable" Name="dt_July" />
-        <Variable x:TypeArguments="sd:DataTable" Name="dt_Temp" />
-        <Variable x:TypeArguments="sd:DataTable" Name="dt_results" />
-        <Variable x:TypeArguments="sd:DataTable" Name="dt_InputData" />
-        <Variable x:TypeArguments="sd:DataTable" Name="dt_Output" />
-      </Sequence.Variables>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to load june data sheet" DataTable="[dt_June]" DisplayName="Read Range Workbook : June " sap:VirtualizedContainerService.HintSize="387.2,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Leave_Jun21" WorkbookPath="Input\Assignment_1.xlsx">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:ReadRange>
-      <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message that june sheet is extracted " DisplayName="Log Message : June " sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;June data extracted&quot;]">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:LogMessage>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to load july data sheet" DataTable="[dt_July]" DisplayName="Read Range Workbook : July " sap:VirtualizedContainerService.HintSize="353.6,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_5" SheetName="Leave_July21" WorkbookPath="Input\Assignment_1.xlsx">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:ReadRange>
-      <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used log message july data is extracted" DisplayName="Log Message : July " sap:VirtualizedContainerService.HintSize="353.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot; July data is extracted&quot;]">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:LogMessage>
-      <ui:JoinDataTables sap2010:Annotation.AnnotationText="This activity is used to perform left outter join operation" DataTable1="[dt_June]" DataTable2="[dt_July]" DisplayName="Join Data Tables : Left join june and july " sap:VirtualizedContainerService.HintSize="353.6,136" sap2010:WorkflowViewState.IdRef="JoinDataTables_3" JoinType="Left" OutputDataTable="[dt_Temp]">
-        <ui:JoinDataTables.Arguments>
-          <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
-            <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
-              <ui:JoinOperationArgument.Column1>
-                <InArgument x:TypeArguments="x:String">["Emp_ID"]</InArgument>
-              </ui:JoinOperationArgument.Column1>
-              <ui:JoinOperationArgument.Column2>
-                <InArgument x:TypeArguments="x:String">["Emp_ID"]</InArgument>
-              </ui:JoinOperationArgument.Column2>
-            </ui:JoinOperationArgument>
-          </scg:List>
-        </ui:JoinDataTables.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:JoinDataTables>
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="This activity is used to display leave on june and not in july " DataTable="[dt_Temp]" DisplayName="Filter Data Table : June Absent " FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="353.6,238.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[dt_results]" SelectColumnsMode="Keep">
-        <ui:FilterDataTable.Filters>
-          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-            <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="NOTEMPTY">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["Emp_ID_1"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-            </ui:FilterOperationArgument>
-          </scg:List>
-        </ui:FilterDataTable.Filters>
-        <ui:FilterDataTable.SelectColumns>
-          <scg:List x:TypeArguments="InArgument" Capacity="4">
-            <InArgument x:TypeArguments="x:String">["Emp_ID"]</InArgument>
-          </scg:List>
-        </ui:FilterDataTable.SelectColumns>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:FilterDataTable>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_InputData]" DisplayName="Read Range Workbook : Personal" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ReadRange_6" SheetName="Personal" WorkbookPath="Input\Assignment_1.xlsx" />
-      <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is use to log message that personal sheet is extracted" DisplayName="Log Message personal" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Personal sheet is  extracted&quot;]">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:LogMessage>
-      <ui:JoinDataTables sap2010:Annotation.AnnotationText="This is used to join the remporary result and personal file " DataTable1="[dt_InputData]" DataTable2="[dt_results]" DisplayName="Join Data Tables : Personal and leave " sap:VirtualizedContainerService.HintSize="353.6,136" sap2010:WorkflowViewState.IdRef="JoinDataTables_4" JoinType="Inner" OutputDataTable="[dt_Output]">
-        <ui:JoinDataTables.Arguments>
-          <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
-            <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
-              <ui:JoinOperationArgument.Column1>
-                <InArgument x:TypeArguments="x:String">["Emp_ID"]</InArgument>
-              </ui:JoinOperationArgument.Column1>
-              <ui:JoinOperationArgument.Column2>
-                <InArgument x:TypeArguments="x:String">["Emp_ID"]</InArgument>
-              </ui:JoinOperationArgument.Column2>
-            </ui:JoinOperationArgument>
-          </scg:List>
-        </ui:JoinDataTables.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:JoinDataTables>
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="This activity is used to retrieve name " DataTable="[dt_Output]" DisplayName="Filter Data Table : Name " FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dt_results]" SelectColumnsMode="Keep">
-        <ui:FilterDataTable.Filters>
-          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-            <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
-          </scg:List>
-        </ui:FilterDataTable.Filters>
-        <ui:FilterDataTable.SelectColumns>
-          <scg:List x:TypeArguments="InArgument" Capacity="4">
-            <InArgument x:TypeArguments="x:String">["Fname"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["LName"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Emp_ID"]</InArgument>
-          </scg:List>
-        </ui:FilterDataTable.SelectColumns>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:FilterDataTable>
-      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to upload the results to excel" DataTable="[dt_results]" DisplayName="Write Range Workbook : To excel" sap:VirtualizedContainerService.HintSize="353.6,179.2" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="Output\Assignment_1\Assignment_1e.xlsx">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:WriteRange>
-      <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message success" DisplayName="Log Message : Executed successfully " sap:VirtualizedContainerService.HintSize="353.6,196.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Executed&quot;]">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:LogMessage>
-    </Sequence>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to load june data sheet" DataTable="[dt_June]" DisplayName="Read Range Workbook : June " sap:VirtualizedContainerService.HintSize="449.6,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Leave_Jun21" WorkbookPath="Input\Assignment_1.xlsx">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to load june data sheet" DataTable="[dt_June]" DisplayName="Read Range Workbook : June_Leave" sap:VirtualizedContainerService.HintSize="353.6,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Leave_Jun21" WorkbookPath="Input\Assignment_1.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message that june sheet is extracted " DisplayName="Log Message : June " sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;June data extracted&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message that june sheet is extracted " DisplayName="Log Message : June Leave " sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;June data extracted&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to load july data sheet" DataTable="[dt_July]" DisplayName="Read Range Workbook : July " sap:VirtualizedContainerService.HintSize="449.6,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Leave_July21" WorkbookPath="Input\Assignment_1.xlsx">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to load july data sheet" DataTable="[dt_July]" DisplayName="Read Range Workbook : July " sap:VirtualizedContainerService.HintSize="353.6,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Leave_July21" WorkbookPath="Input\Assignment_1.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used log message july data is extracted" DisplayName="Log Message : July " sap:VirtualizedContainerService.HintSize="449.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot; July data is extracted&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used log message july data is extracted" DisplayName="Log Message : July " sap:VirtualizedContainerService.HintSize="353.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot; July data is extracted&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:JoinDataTables sap2010:Annotation.AnnotationText="This activity is used to perform left outter join operation" DataTable1="[dt_June]" DataTable2="[dt_July]" DisplayName="Join Data Tables : Left join june and july " sap:VirtualizedContainerService.HintSize="449.6,136" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Left" OutputDataTable="[dt_Temp]">
+    <ui:JoinDataTables sap2010:Annotation.AnnotationText="This activity is used to perform left outter join operation" DataTable1="[dt_June]" DataTable2="[dt_July]" DisplayName="Join Data Tables : Left join june and july " sap:VirtualizedContainerService.HintSize="353.6,136" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Left" OutputDataTable="[dt_Temp]">
       <ui:JoinDataTables.Arguments>
         <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
           <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -294,7 +150,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:JoinDataTables>
-    <ui:FilterDataTable sap2010:Annotation.AnnotationText="This activity is used to display leave on june and not in july " DataTable="[dt_Temp]" DisplayName="Filter Data Table : June Absent " FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="449.6,238.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_results]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="This activity is used to display leave on june and not in july " DataTable="[dt_Temp]" DisplayName="Filter Data Table : June Absent " FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="353.6,238.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_results]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="NOTEMPTY">
@@ -307,6 +163,7 @@
       <ui:FilterDataTable.SelectColumns>
         <scg:List x:TypeArguments="InArgument" Capacity="4">
           <InArgument x:TypeArguments="x:String">["Emp_ID"]</InArgument>
+          <InArgument x:TypeArguments="x:String">["Days"]</InArgument>
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
       <sap:WorkflowViewStateService.ViewState>
@@ -315,15 +172,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_InputData]" DisplayName="Read Range Workbook : Personal" sap:VirtualizedContainerService.HintSize="449.6,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Personal" WorkbookPath="Input\Assignment_1.xlsx" />
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is use to log message that personal sheet is extracted" DisplayName="Log Message personal" sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Personal sheet is  extracted&quot;]">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_InputData]" DisplayName="Read Range Workbook : Personal" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Personal" WorkbookPath="Input\Assignment_1.xlsx" />
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is use to log message that personal sheet is extracted" DisplayName="Log Message personal" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Personal sheet is  extracted&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:JoinDataTables sap2010:Annotation.AnnotationText="This is used to join the remporary result and personal file " DataTable1="[dt_InputData]" DataTable2="[dt_results]" DisplayName="Join Data Tables : Personal and leave " sap:VirtualizedContainerService.HintSize="449.6,136" sap2010:WorkflowViewState.IdRef="JoinDataTables_2" JoinType="Inner" OutputDataTable="[dt_Output]">
+    <ui:JoinDataTables sap2010:Annotation.AnnotationText="This is used to join the remporary result and personal file " DataTable1="[dt_InputData]" DataTable2="[dt_results]" DisplayName="Join Data Tables : Personal and leave " sap:VirtualizedContainerService.HintSize="353.6,136" sap2010:WorkflowViewState.IdRef="JoinDataTables_2" JoinType="Inner" OutputDataTable="[dt_Output]">
       <ui:JoinDataTables.Arguments>
         <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
           <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -342,7 +199,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:JoinDataTables>
-    <ui:FilterDataTable sap2010:Annotation.AnnotationText="This activity is used to retrieve name " DataTable="[dt_Output]" DisplayName="Filter Data Table : Name " FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_results]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="This activity is used to retrieve name " DataTable="[dt_Output]" DisplayName="Filter Data Table : Name " FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_results]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -353,6 +210,7 @@
           <InArgument x:TypeArguments="x:String">["Fname"]</InArgument>
           <InArgument x:TypeArguments="x:String">["LName"]</InArgument>
           <InArgument x:TypeArguments="x:String">["Emp_ID"]</InArgument>
+          <InArgument x:TypeArguments="x:String">["Days"]</InArgument>
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
       <sap:WorkflowViewStateService.ViewState>
@@ -361,14 +219,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to upload the results to excel" DataTable="[dt_results]" DisplayName="Write Range Workbook : To excel" sap:VirtualizedContainerService.HintSize="449.6,179.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Output\Assignment_1\Assignment_1e.xlsx">
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to upload the results to excel" DataTable="[dt_results]" DisplayName="Write Range Workbook : To excel" sap:VirtualizedContainerService.HintSize="353.6,179.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Output\Assignment_1\Assignment_1e.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message success" DisplayName="Log Message : Executed successfully " sap:VirtualizedContainerService.HintSize="449.6,196.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Executed&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message success" DisplayName="Log Message : Executed successfully " sap:VirtualizedContainerService.HintSize="353.6,196.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Executed&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
